@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1>Livewire Crash Course</h1>
-    <livewire:helloworld/>
+    {{-- <livewire:helloworld/> --}}
+    @livewire('helloworld', ['text' => 'Changed quote...'])
 
     @livewireScripts
 </body>
