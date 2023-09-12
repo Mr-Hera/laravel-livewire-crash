@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Livewire Crash Course</h1>
-    <livewire:helloWorld />
+    <livewire:helloworld/>
 
     @livewireScripts
 </body>
