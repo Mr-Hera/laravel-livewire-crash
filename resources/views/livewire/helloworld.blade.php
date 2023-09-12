@@ -1,6 +1,22 @@
 <div>
     Hello & Welcome!
-    {{ $quote }} <hr />
+    {{ $quote }} <br />
+    {{-- {{ strtoupper($quote) }} <br /> --}}
+
+    {{-- <button wire:click="$set('quote', 'Livewire Bandit on the loose!!!')">Change Quote</button> --}}
+    {{-- <button wire:click="resetQuote">Change Quote</button> --}}
+    {{-- <button wire:click="resetQuote('Livewire Bandit on the loose!!!')">Change Quote</button> --}}
+    {{-- <button wire:mouseenter="resetQuote">Change Quote</button> --}}
+
+    <form action="#" wire:submit="resetQuote('Livewire Bandit on the loose!!!')">
+        <button>Change Quote</button>
+    </form>
+
+    {{-- <form action="#" wire:submit.prevent="resetQuote('Livewire Bandit on the loose!!!')">
+        <button>Change Quote</button>
+    </form> --}}
+
+    <br /><hr />
 
     <input type="text" wire:model.live.lazy="quote" />
 
