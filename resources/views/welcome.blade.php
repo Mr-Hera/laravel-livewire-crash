@@ -11,6 +11,7 @@
     <h1>Livewire Crash Course</h1>
     {{-- <livewire:helloworld/> --}}
     @livewire('helloworld', ['text' => 'Changed quote...'])
+    @livewire('store-student')
 
     @livewireScripts
 </body>
