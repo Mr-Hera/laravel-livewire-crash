@@ -9,7 +9,7 @@ use Livewire\WithFileUploads;
 class StoreStudent extends Component
 {
     use WithFileUploads;
-    public $name, $email, $image;
+    public $name, $email, $image, $student;
 
     public function saveData() {
         $student = new Student();
@@ -25,6 +25,10 @@ class StoreStudent extends Component
 
     public function resetData() {
         $this->reset(['name', 'email', 'image']);
+    }
+
+    public function mount() {
+        $this->student = Student::all();
     }
 
     public function render()
