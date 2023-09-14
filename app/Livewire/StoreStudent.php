@@ -31,6 +31,13 @@ class StoreStudent extends Component
         $this->student = Student::all();
     }
 
+    public function deleteStudent($id) {
+        $data = Student::find($id);
+        $data->delete();
+
+        $this->mount();
+    }
+
     public function render()
     {
         return view('livewire.store-student');

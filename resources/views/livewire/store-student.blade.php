@@ -19,11 +19,26 @@
         </div>
     </form>
 
-    @foreach ($student as $student)
-        <p>{{ $student->name }}</p>
-        <p>{{ $student->email }}</p>
-        <div class="">
-            <img src="{{ Storage::url($student->image) }}" height="200" width="300" alt="">
-        </div>
-    @endforeach
+    <table border="1px">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+
+        
+        @foreach ($student as $student)
+            <tr>
+                <td>{{ $student->name }}</td>
+                <td>{{ $student->email }}</td>
+                <td class="">
+                    <img src="{{ Storage::url($student->image) }}" height="200" width="300" alt="">
+                </td>
+                <td>
+                    <button style="cursor: pointer" wire:click="deleteStudent({{ $student->id }})">Delete</button>
+                </td>
+            </tr>
+        @endforeach
+    </table>
 </div>
